@@ -1,0 +1,40 @@
+{
+  "name": "Proxy",
+  "description": "Simple Proxy",
+  "version": "0.0.0",
+  "author": "Lucky",
+  
+  "build": {
+    "appId": "1342345",
+    "mac": {
+      "category": "my.com.myproxyapp"
+    },
+    "nsis": {
+      "createDesktopShortcut": false
+    }
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "pack": "electron-builder --dir",
+    "dist": "yarn compile && electron-builder",
+    "disttest": "electron-builder -mwl",
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
+  },
+  "dependencies": {
+    "source-map-support": "^0.5.16"
+  },
+  "devDependencies": {
+    "auto-launch": "^5.0.5",
+    "axios": "^1.1.3",
+    "basic-auth": "^2.0.1",
+    "child_process": "^1.0.2",
+    "electron": "8.2.0",
+    "electron-builder": "^22.4.1",
+    "electron-webpack": "^2.8.2",
+    "net": "^1.0.2",
+    "path": "^0.12.7",
+    "webpack": "~4.42.1"
+  }
+}

@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  
+  div
+  table
+    thead
+      tr
+        th Server Address 
+        th Port
+        th Status
+        th Connections
+    tbody
+      each post, i in userPosts
+        tr
+          td 
+            p #{post.address}
+          td
+            p #{post.port}
+          td
+            p #{post.online}
+          td 
+            p #{post.threads}
